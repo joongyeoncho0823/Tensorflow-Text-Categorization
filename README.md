@@ -28,10 +28,10 @@ embedding dimension
 num_epochs
 
 Out of tanh, sigmoid, and relu, relu performed best.
-The maximum length of the input data was initially set to 350, since the average article was ~370 words long. However, some articles were 50 words long, and others were 400-500 words long. Lowering the maximum length to ~250 improved the results.
+The maximum length of the input data was initially set to 350, since the average article was approx. 370 words long. However, some articles were 50 words long, and others were 400-500 words long. Lowering the maximum length to ~250 improved the results.
 The vocabulary size did not seem to have as big an impact as the maximum length hyperparameter, but performed worse when it was too low (1000~3000) or too high (>7000). I ran multiple tests, and 5000 performed consistently well.
 For the dimension of the layer, 32, 64, and 128 were tested. 64 performed best.
-A lot of num_epochs were tested. 10, 11, 20, 30, 40. I thought running 30~40 epochs would lead to overfitting, but surprisingly performed consistently better at 30~40 epochs. 30 epochs were kept because it seemed to have similar results to 40 epochs.
+A lot of num_epochs were tested. 10, 11, 20, 30, 40. I thought running 30-40 epochs would lead to overfitting, but surprisingly performed consistently better at 30~40 epochs. 30 epochs were kept because it seemed to have similar results to 40 epochs.
 
 Padding and truncating was set to "pre" as default, but "post" seemed to perform better, although I found articles saying "pre" usually performs better for these tasks.
 
